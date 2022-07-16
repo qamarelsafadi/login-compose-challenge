@@ -14,18 +14,13 @@ import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import com.example.androiddevchallenge.ui.theme.labelTextStyle
-import com.example.androiddevchallenge.ui.theme.paddingBottom
-import com.example.androiddevchallenge.ui.theme.paddingTop
+import com.example.androiddevchallenge.ui.theme.footerModifier
+import com.example.androiddevchallenge.ui.theme.logoModifier
 
 @Composable
 fun ImageWithBackground(
     painter: Painter,
-    @DrawableRes backgroundDrawableResId: Int,
-    modifier: Modifier = Modifier,
-    alignment: Alignment = Alignment.Center,
-    contentScale: ContentScale = ContentScale.Fit,
-    alpha: Float = DefaultAlpha,
-    colorFilter: ColorFilter? = null
+    @DrawableRes backgroundDrawableResId: Int
 ) {
     Box(
         Modifier.wrapContentSize(Alignment.TopCenter)
@@ -39,7 +34,7 @@ fun ImageWithBackground(
         Image(
             painter,
             contentDescription = "",
-            modifier = paddingTop.align(Alignment.TopCenter)
+            modifier = logoModifier.align(Alignment.TopCenter)
         )
 
     }
@@ -49,11 +44,6 @@ fun ImageWithBackground(
 fun TextWithBackground(
     text: String,
     @DrawableRes backgroundDrawableResId: Int,
-    modifier: Modifier = Modifier,
-    alignment: Alignment = Alignment.Center,
-    contentScale: ContentScale = ContentScale.Fit,
-    alpha: Float = DefaultAlpha,
-    colorFilter: ColorFilter? = null
 ) {
     Box(
         Modifier.wrapContentSize(Alignment.TopCenter)
@@ -64,13 +54,11 @@ fun TextWithBackground(
             contentDescription = "",
             Modifier.offset(y = 55.dp).fillMaxWidth(),
             contentScale = ContentScale.Crop,
-
         )
-
         Text(
             text,
             style = labelTextStyle,
-            modifier = paddingBottom.align(Alignment.BottomCenter)
+            modifier = footerModifier.align(Alignment.BottomCenter)
 
         )
 

@@ -27,7 +27,6 @@ fun EditText(
     icon: Int,
     isPassword: Boolean
 ) {
-
     TextField(
         value = value,
         onValueChange = onValueChange,

@@ -1,4 +1,4 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <!--
       Copyright 2020 The Android Open Source Project
       Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except
@@ -10,4 +10,8 @@
       the License.
       -->
     <string name="app_name">AndroidDevChallenge</string>
+    <string name="sign_in" tools:ignore="ExtraTranslation">Sign in</string>
+    <string name="temp_user">johnsondoe</string>
+    <string name="password">password</string>
+    <string name="new_account_lbl">I am new here, i need an accountz</string>
 </resources>
